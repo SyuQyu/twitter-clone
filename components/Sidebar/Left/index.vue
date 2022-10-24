@@ -14,15 +14,38 @@ const { defaultTransition } = useTailwindConfig()
                 </div>
             </nuxt-link>
         </div>
-        <SidebarLeftTab active>
-            <template v-slot:icon>
-                <div class="w-8 h-8">
-                    <HomeIcon />
-                </div>
-            </template>
-            <template v-slot:name>
-                Home
-            </template>
-        </SidebarLeftTab>
+        <div class="mt-2 space-y-3">
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <div class="w-8 h-8">
+                        <HomeIcon />
+                    </div>
+                </template>
+                <template v-slot:name>
+                    Home
+                </template>
+            </SidebarLeftTab>
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <div class="w-8 h-8">
+                        <HomeIcon />
+                    </div>
+                </template>
+                <template v-slot:name>
+                    Home
+                </template>
+            </SidebarLeftTab>
+            <SidebarLeftTab active>
+                <template v-slot:icon>
+                    <div class="w-8 h-8">
+                        <HomeIcon />
+                    </div>
+                </template>
+                <template v-slot:name>
+                    Home
+                </template>
+            </SidebarLeftTab>
+        </div>
+
     </div>
 </template>
