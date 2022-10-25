@@ -1,5 +1,12 @@
 <script setup>
-import { HomeIcon } from "@heroicons/vue/20/solid"
+import {
+    HomeIcon
+} from "@heroicons/vue/24/solid"
+import {
+    HashtagIcon, BellIcon,
+    InboxIcon, BookmarkIcon, DocumentTextIcon,
+    UserIcon, EllipsisHorizontalCircleIcon
+} from "@heroicons/vue/24/outline";
 const { defaultTransition } = useTailwindConfig()
 </script>
 
@@ -25,24 +32,74 @@ const { defaultTransition } = useTailwindConfig()
                     Home
                 </template>
             </SidebarLeftTab>
-            <SidebarLeftTab active>
+            <SidebarLeftTab>
                 <template v-slot:icon>
                     <div class="w-8 h-8">
-                        <HomeIcon />
+                        <HashtagIcon />
                     </div>
                 </template>
                 <template v-slot:name>
-                    Home
+                    Explore
                 </template>
             </SidebarLeftTab>
-            <SidebarLeftTab active>
+            <SidebarLeftTab>
                 <template v-slot:icon>
                     <div class="w-8 h-8">
-                        <HomeIcon />
+                        <BellIcon />
                     </div>
                 </template>
                 <template v-slot:name>
-                    Home
+                    Notifications
+                </template>
+            </SidebarLeftTab>
+            <SidebarLeftTab>
+                <template v-slot:icon>
+                    <div class="w-8 h-8">
+                        <InboxIcon />
+                    </div>
+                </template>
+                <template v-slot:name>
+                    Messages
+                </template>
+            </SidebarLeftTab>
+            <SidebarLeftTab>
+                <template v-slot:icon>
+                    <div class="w-8 h-8">
+                        <BookmarkIcon />
+                    </div>
+                </template>
+                <template v-slot:name>
+                    Bookmarks
+                </template>
+            </SidebarLeftTab>
+            <SidebarLeftTab>
+                <template v-slot:icon>
+                    <div class="w-8 h-8">
+                        <DocumentTextIcon />
+                    </div>
+                </template>
+                <template v-slot:name>
+                    Lists
+                </template>
+            </SidebarLeftTab>
+            <SidebarLeftTab>
+                <template v-slot:icon>
+                    <div class="w-8 h-8">
+                        <UserIcon />
+                    </div>
+                </template>
+                <template v-slot:name>
+                    Profile
+                </template>
+            </SidebarLeftTab>
+            <SidebarLeftTab>
+                <template v-slot:icon>
+                    <div class="w-8 h-8">
+                        <EllipsisHorizontalCircleIcon />
+                    </div>
+                </template>
+                <template v-slot:name>
+                    More
                 </template>
             </SidebarLeftTab>
         </div>
