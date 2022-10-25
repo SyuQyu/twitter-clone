@@ -16,9 +16,9 @@
           </main>
 
           <!-- Right sidebar -->
-          <div class="hidden md:block xl:col-span-4 md:col-span-3 bg-blue-500">
+          <div class="hidden col-span-12 md:block xl:col-span-4 md:col-span-3">
             <div clas="sticky top-0">
-              <h1>tst</h1>
+              <SidebarRight />
             </div>
           </div>
 
