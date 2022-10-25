@@ -21,7 +21,7 @@ const { defaultTransition } = useTailwindConfig()
                 </div>
             </nuxt-link>
         </div>
-        <div class="mt-2 space-y-3">
+        <div>
             <SidebarLeftTab active>
                 <template v-slot:icon>
                     <div class="w-8 h-8">

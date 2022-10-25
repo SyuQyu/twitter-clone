@@ -12,7 +12,9 @@ const textClasses = computed(() => props.active ? 'font-semibold' : 'font-normal
 </script>
 
 <template>
-    <nuxt-link to="#" class="flex items-center p-3 w-min text-black hover:bg-gray-200 rounded-full dark:hover:bg-dim-200 dark:text-white" :class="defaultTransition">
+    <nuxt-link to="#"
+        class="flex items-center p-3 w-min text-black hover:bg-gray-200 rounded-full dark:hover:bg-dim-200 dark:text-white"
+        :class="defaultTransition">
         <div class="w-6 h-6 text-dark mb-2">
             <slot name="icon">
 
