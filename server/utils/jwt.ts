@@ -21,6 +21,23 @@ const genRefreshToken = (user: any) => {
     })
 }
 
+export const decodeRefreshToken = (token:any) => {
+    const config = useRuntimeConfig()
+    try {
+        return jwt.verify(token, config.jwtRefreshSecret)
+    } catch (error) {
+        return null
+    }
+}
+
+export const decodeAccessToken = (token:any) => {
+    const config = useRuntimeConfig()
+    try {
+        return jwt.verify(token, config.jwtAccessSecret)
+    } catch (error) {
+        return null
+    }
+}
 
 export const generateToken = (user: any) => {
     const accessToken = genAccessToken(user)
