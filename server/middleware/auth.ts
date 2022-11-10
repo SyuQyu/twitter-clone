@@ -23,7 +23,7 @@ export default defineEventHandler(async (event) => {
     }
 
     const token = event.req.headers['authorization']?.split(' ')[1]
-    console.log(token, "data token")
+    // console.log(token, "data token")
     const decoded = decodeAccessToken(token) as JwtPayload
 
     if (!decoded) {
