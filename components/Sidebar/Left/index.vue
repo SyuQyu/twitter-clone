@@ -5,7 +5,7 @@ import {
 import {
     HashtagIcon, BellIcon,
     InboxIcon, BookmarkIcon, DocumentTextIcon,
-    UserIcon, EllipsisHorizontalCircleIcon
+    UserIcon, EllipsisHorizontalCircleIcon, PencilIcon,
 } from "@heroicons/vue/24/outline";
 const { defaultTransition } = useTailwindConfig()
 </script>
@@ -102,6 +102,21 @@ const { defaultTransition } = useTailwindConfig()
                     More
                 </template>
             </SidebarLeftTab>
+            <div class="pt-3 hidden xl:block">
+                <UIButton liquids size="lg">
+                    <strong>
+                        Tweet
+                    </strong>
+                </UIButton>
+            </div>
+            
+            <div class="p-2 block xl:hidden">
+                <UIButton>
+                    <div class="w-6 h-6 font-bold">
+                        <PencilIcon />
+                    </div>
+                </UIButton>
+            </div>
         </div>
 
     </div>
