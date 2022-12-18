@@ -12,7 +12,21 @@ export default () => {
         })
     }
 
+    const getHomeTweets = () => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const res = await userFetchApi('/api/tweets', {
+                    method: 'GET',
+                })
+                resolve(res)
+            } catch (err) {
+                reject(err)
+            }
+        })
+    }
+
     return {
-        postTweet
+        postTweet,
+        getHomeTweets
     }
 }

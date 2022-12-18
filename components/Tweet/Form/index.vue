@@ -1,30 +1,30 @@
 <script setup>
 
-    const loading = ref(false)
+const loading = ref(false)
 
-    const {postTweet} = useTweets()
+const { postTweet } = useTweets()
 
-    const props = defineProps({
-        user: {
-            type: Object,
-            required: true
-        }
-    })
-
-    async function handleFormSubmit(data) {
-        loading.value = true
-        try {
-            const res = await postTweet({
-                text : data.text,
-                mediaFiles: data.mediaFiles
-            })
-            console.log(res)
-        } catch (e) {
-            console.log(e)
-        } finally {
-            loading.value = false
-        }
+const props = defineProps({
+    user: {
+        type: Object,
+        required: true
     }
+})
+
+async function handleFormSubmit(data) {
+    loading.value = true
+    try {
+        const res = await postTweet({
+            text: data.text,
+            mediaFiles: data.mediaFiles
+        })
+        console.log(res)
+    } catch (e) {
+        console.log(e)
+    } finally {
+        loading.value = false
+    }
+}
 </script>
 <template>
     <div>
@@ -33,7 +33,7 @@
                 <UISpinner />
             </div>
             <div v-else>
-                <TweetFormInput :user="props.user" @onSubmit="handleFormSubmit"/>
+                <TweetFormInput :user="props.user" @onSubmit="handleFormSubmit" />
             </div>
         </div>
     </div>
